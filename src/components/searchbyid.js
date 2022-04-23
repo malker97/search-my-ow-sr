@@ -34,19 +34,19 @@ const MySearchBar = (props) => {
             ranks.tank = account['competitive']['tank']['rank'];
             ranks.dps = account['competitive']['damage']['rank'];
             ranks.support = account['competitive']['support']['rank'];
-            // console.log(ids.indexOf(accountID));
             if(ids.indexOf(accountID) === -1){
                 setRows( arr => [...arr, ranks]);
                 setIDs(arr => [...arr, accountID]);
                 setSeveritytype("success");
                 setErrortitle("Success");
-                setErrormsg("");
+                setErrormsg("");   
             }
             else{
                 setSeveritytype("info");
                 setErrortitle("Info");
                 setErrormsg("Account has been searched");
             }
+            setAccountID("");
           }
           else{
             setSeveritytype("error");
