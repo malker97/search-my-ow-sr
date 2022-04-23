@@ -6,6 +6,7 @@ import {columns} from './datagriddata';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Stack from '@mui/material/Stack';
+import { useCookies } from "react-cookie";
 // Goodok#31117 测试用ID
 // 测试用API接口
 // http://owapi.io/profile/pc/us/Goodok-31117
@@ -39,7 +40,7 @@ const MySearchBar = (props) => {
                 setIDs(arr => [...arr, accountID]);
                 setSeveritytype("success");
                 setErrortitle("Success");
-                setErrormsg("");   
+                setErrormsg("");  
             }
             else{
                 setSeveritytype("info");
